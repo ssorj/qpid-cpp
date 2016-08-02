@@ -14,9 +14,9 @@ environment:
   PYTHON_BUILD_DIR: "%APPVEYOR_BUILD_FOLDER%\\qpid-python\\build"
   CPP_SOURCE_DIR: "%APPVEYOR_BUILD_FOLDER%"
   CPP_BUILD_DIR: "%APPVEYOR_BUILD_FOLDER%\\build"
-  BOOST_ROOT: C:\Libraries\boost_1_59_0
-  BOOST_LIBRARYDIR: C:\Libraries\boost_1_59_0\lib32-msvc-14.0
-  PATH: "C:\\Libraries\\boost_1_59_0\\lib32-msvc-14.0;%APPVEYOR_BUILD_FOLDER%\\qpid-python\\build\\bin;%PATH%"
+  BOOST_ROOT: C:\Libraries\boost_1_60_0
+  BOOST_LIBRARYDIR: C:\Libraries\boost_1_60_0\lib32-msvc-14.0
+  PATH: "C:\\Libraries\\boost_1_60_0\\lib32-msvc-14.0;%APPVEYOR_BUILD_FOLDER%\\qpid-python\\build\\bin;%PATH%"
   PYTHONPATH: "%APPVEYOR_BUILD_FOLDER%\\qpid-python\\build\\lib"
 before_build:
   - echo %TOP_DIR%
