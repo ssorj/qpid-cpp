@@ -147,8 +147,8 @@ protected:
       public:
         ManageablePtr(Manageable* m) : ptr(m) {}
 
-        uint32_t ManagementMethod(uint32_t methodId, Args& args, std::string& text);
-        bool AuthorizeMethod(uint32_t methodId, Args& args, const std::string& userId);
+        QPID_COMMON_EXTERN uint32_t ManagementMethod(uint32_t methodId, Args& args, std::string& text);
+        QPID_COMMON_EXTERN bool AuthorizeMethod(uint32_t methodId, Args& args, const std::string& userId);
         void reset();
     };
 
