@@ -25,6 +25,7 @@ before_build:
   - echo %BOOST_LIBRARYDIR%
   - echo %PYTHONPATH%
   - echo %PATH%
+  - git clone "https://github.com/apache/qpid-python" %PYTHON_SOURCE_DIR%
   - md %PYTHON_BUILD_DIR%
   - md %CPP_BUILD_DIR%
   - cd %CPP_BUILD_DIR%
