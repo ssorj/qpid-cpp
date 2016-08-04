@@ -31,7 +31,7 @@ if "BOOST_TEST_CATCH_SYSTEM_ERRORS" not in ENV:
 
 if WINDOWS:
     ENV["QPID_SSL_CERT_STORE_LOCATION"] = "LocalMachine"
-    ENV["QPID_SSL_CERT_NAME"] = "localhost"
+    ENV["QPID_SSL_CERT_NAME"] = "appveyor-vm"
     ENV["QPID_SSL_PORT"] = "0"
     
 call_with_valgrind("unit_test")
