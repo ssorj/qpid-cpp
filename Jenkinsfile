@@ -1,24 +1,24 @@
 pipeline {
-    agent any;
+    agent any
 
     stages {
-        stage("build") {
+        stage('build') {
             steps {
-                echo "Building!";
-                sh "mkdir bld && cd bld && cmake .. && make";
+                echo 'Building!';
+                sh 'mkdir bld && cd bld && cmake .. && make'
             }
         }
 
-        stage("test") {
+        stage('test') {
             steps {
-                echo "Testing!";
+                echo 'Testing!'
             }
         }
 
 
-        stage("deploy") {
+        stage('deploy') {
             steps {
-                echo "Deploying!";
+                echo 'Deploying!'
             }
         }
     }
