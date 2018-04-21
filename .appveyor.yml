@@ -25,7 +25,7 @@ before_build:
   - echo %BOOST_LIBRARYDIR%
   - echo %PYTHONPATH%
   - echo %PATH%
-  - git clone "https://github.com/apache/qpid-python" %PYTHON_SOURCE_DIR%
+  - git clone --depth 1 "https://github.com/apache/qpid-python" %PYTHON_SOURCE_DIR%
   - md %PYTHON_BUILD_DIR%
   - md %CPP_BUILD_DIR%
   - cd %CPP_BUILD_DIR%
@@ -38,6 +38,6 @@ build_script:
 #before_test:
 #  - cd %CPP_SOURCE_DIR%
 #  - PowerShell etc\InstallSelfSignedCert.ps1
-#test_script:
-#  - cd %CPP_BUILD_DIR%
-#  - ctest -VV --build-config RelWithDebInfo
+test_script:
+  - cd %CPP_BUILD_DIR%
+  - ctest -VV --build-config RelWithDebInfo
