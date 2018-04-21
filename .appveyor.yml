@@ -39,5 +39,7 @@ build_script:
 #  - cd %CPP_SOURCE_DIR%
 #  - PowerShell etc\InstallSelfSignedCert.ps1
 test_script:
+  - assoc .py=Python.File
+  - ftype Python.File=C:\Python27\pythonw.exe "%1" %*
   - cd %CPP_BUILD_DIR%
   - ctest -VV --build-config RelWithDebInfo
